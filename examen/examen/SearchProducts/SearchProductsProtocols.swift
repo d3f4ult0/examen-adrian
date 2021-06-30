@@ -11,28 +11,28 @@
 import Foundation
 
 //MARK: Wireframe -
-protocol SearchProductsWireframeProtocol: class {
+protocol SearchProductsWireframeProtocol: AnyObject {
 
 }
 //MARK: Presenter -
-protocol SearchProductsPresenterProtocol: class {
+protocol SearchProductsPresenterProtocol: AnyObject {
 
 }
 
 //MARK: Interactor -
-protocol SearchProductsInteractorProtocol: class {
+protocol SearchProductsInteractorProtocol: AnyObject {
 
   var presenter: SearchProductsPresenterProtocol?  { get set }
 }
 
 //MARK: View -
-protocol SearchProductsViewProtocol: class {
+protocol SearchProductsViewProtocol: AnyObject {
 
   var presenter: SearchProductsPresenterProtocol?  { get set }
 }
 
 //MARK: RemoteData -
 
-protocol SearchProductsRemoteDataManagerProtocol {
+protocol SearchProductsRemoteDataManagerProtocol: AnyObject {
     
 }
