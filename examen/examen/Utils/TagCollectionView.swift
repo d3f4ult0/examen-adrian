@@ -26,6 +26,11 @@ class TagCollectionView: UICollectionView {
         
         return totalWidthLetters
     }
+    
+    public func addElement(element:String){
+        tags.append(element)
+        self.reloadData()
+    }
 }
 
 extension TagCollectionView:UICollectionViewDataSource{

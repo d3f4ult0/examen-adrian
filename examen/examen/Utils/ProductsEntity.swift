@@ -22,3 +22,7 @@ struct PrimaryOffer:Codable {
     var offerPrice:Int
     var currencyCode:String
 }
+
+struct Body:Codable {
+    var text:String
+}

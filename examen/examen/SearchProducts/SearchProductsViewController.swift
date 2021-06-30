@@ -15,23 +15,30 @@ class SearchProductsViewController: UIViewController, SearchProductsViewProtocol
     @IBOutlet weak var tagsCollectionView: TagCollectionView!
     @IBOutlet weak var productsCollectionView: ProductsCollectionView!
     
+    @IBOutlet weak var viewLoad: UIView!
     var presenter: SearchProductsPresenterProtocol?
     
     //Variables
-    var tags:[String] = ["sony","Nintendo","Computer","sony","Nintendo","Computer","sony","Nintendo","Computer"]
+    var tags:[String] = []
     var products:Products?
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configUI()
+    }
+    
+    func configUI(){
+        if let savedTags = presenter?.getTags(){
+            tags = savedTags
+        }
         tagsCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
-        tagsCollectionView.setValues(tags: tags)
+        if tags.count > 0{
+            tagsCollectionView.setValues(tags: tags)
+        }
+
         
         productsCollectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
-        let producDetail1 = ProductDetails(title: "Primer producto", imageUrl: "https://i5.walmartimages.com/asr/8a54d8c4-fe2b-45e5-a82d-5e7795cc3bbc_1.b62390d770a96572adaa9584f64bdfe2.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff", primaryOffer: PrimaryOffer(offerPrice: 250, currencyCode: "USD"))
-        let producDetail2 = ProductDetails(title: "Segundo producto", imageUrl: "https://i5.walmartimages.com/asr/8a54d8c4-fe2b-45e5-a82d-5e7795cc3bbc_1.b62390d770a96572adaa9584f64bdfe2.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff", primaryOffer: PrimaryOffer(offerPrice: 399, currencyCode: "MXN"))
-        products = Products(numberOfProducts: 2, productDetails: [producDetail1,producDetail2])
-        productsCollectionView.setValues(products: products!)
+//        productsCollectionView.setValues(products: products)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +47,30 @@ class SearchProductsViewController: UIViewController, SearchProductsViewProtocol
     }
     
     @IBAction func searchButtonAction(_ sender: Any) {
+        let text = searchTextField.text?.uppercased()
+        if text != "" && text != nil {
+            //Se compara lo escrito con las tags guardadas
+            if !tags.contains(text!){
+                tagsCollectionView.addElement(element: text!)
+                tags.append(text!)
+                presenter?.saveTags(tags: tags)
+            }
+            viewLoad.isHidden = false
+            presenter?.searchProduct(text: text!, page: 1)
+        }
+    }
+    
+    func returnInfo(product:Products){
+        viewLoad.isHidden = true
+        productsCollectionView.addElement(element: product)
+    }
+    
+    func returnError(){
+        let alert = UIAlertController(title: "Error", message: "Se termino el tiempo de espera y el servidor no respondio", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: {
+            self.viewLoad.isHidden = true
+        })
     }
     
 }

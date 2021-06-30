@@ -16,13 +16,18 @@ protocol SearchProductsWireframeProtocol: AnyObject {
 }
 //MARK: Presenter -
 protocol SearchProductsPresenterProtocol: AnyObject {
-
+    func getTags() -> [String]
+    func saveTags(tags:[String])
+    func searchProduct(text:String,page:Int)
 }
 
 //MARK: Interactor -
 protocol SearchProductsInteractorProtocol: AnyObject {
 
   var presenter: SearchProductsPresenterProtocol?  { get set }
+    func getTags() -> [String]
+    func saveTags(tags:[String])
+    func searchProduct(text:String,page:Int)
 }
 
 //MARK: View -

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ProductsCollectionView: UICollectionView {
 
@@ -19,9 +18,15 @@ class ProductsCollectionView: UICollectionView {
         self.delegate = self
     }
 
-    public func setValues(products:Products){
+    public func setValues(products:Products?){
         self.products = products
-        self.productDetails = products.productDetails
+        self.productDetails = products?.productDetails
+    }
+    
+    public func addElement(element:Products){
+        self.products = element
+        self.productDetails = products?.productDetails
+        self.reloadData()
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

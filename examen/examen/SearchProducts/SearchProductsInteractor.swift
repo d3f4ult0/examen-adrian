@@ -13,4 +13,44 @@ import UIKit
 class SearchProductsInteractor: SearchProductsInteractorProtocol {
 
     weak var presenter: SearchProductsPresenterProtocol?
+    
+    
+    func getTags() -> [String]{
+        let defaults = UserDefaults.standard
+        if let tags = defaults.stringArray(forKey: "tags"){
+            return tags
+        }
+        return []
+    }
+    
+    func saveTags(tags:[String]){
+        let defaults = UserDefaults.standard
+        defaults.setValue(tags, forKey: "tags")
+    }
+    
+    func searchProduct(text:String,page:Int){
+        
+        let urlSessionConfiguration = URLSessionConfiguration.default
+        urlSessionConfiguration.httpAdditionalHeaders = ["X-IBM-Client-Id":"adb8204d-d574-4394-8c1a-53226a40876e"]
+        let urlSession = URLSession(configuration: urlSessionConfiguration)
+        let url = URL(string: "https://00672285.us-south.apigw.appdomain.cloud/demo-gapsi/search?query=\(text)&page=?\(page)")
+
+        urlSession.dataTask(with: url!) { data, response, error in
+            if data != nil{
+                let jsonData = data?.base64EncodedString().data(using: .utf8)
+                let producto = try! JSONDecoder().decode(Products.self, from: jsonData!)
+            }else{
+                
+            }
+        }.resume()
+    }
+    
+    func returnInfo(){
+        
+    }
+    
+    func returnError(){
+        
+    }
+    
 }

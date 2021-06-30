@@ -11,7 +11,7 @@
 import UIKit
 
 class SearchProductsPresenter: SearchProductsPresenterProtocol {
-
+    
     weak private var view: SearchProductsViewProtocol?
     var interactor: SearchProductsInteractorProtocol?
     private let router: SearchProductsWireframeProtocol
@@ -22,4 +22,18 @@ class SearchProductsPresenter: SearchProductsPresenterProtocol {
         self.router = router
     }
 
+    func getTags() -> [String] {
+        if let tags = interactor?.getTags(){
+            return tags
+        }
+        return []
+    }
+    
+    func saveTags(tags: [String]) {
+        interactor?.saveTags(tags: tags)
+    }
+    
+    func searchProduct(text: String, page: Int) {
+        interactor?.searchProduct(text: text, page: page)
+    }
 }

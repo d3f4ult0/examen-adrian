@@ -14,6 +14,7 @@
                 <outlet property="searchTextField" destination="SsN-m6-P5q" id="CgI-ki-ZiB"/>
                 <outlet property="tagsCollectionView" destination="HD8-jw-eBi" id="Bgl-7i-sxw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewLoad" destination="RUG-Fg-8Dt" id="UwH-af-Htq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -76,16 +77,34 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUG-Fg-8Dt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-Au-rXX">
+                            <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Xg0-Au-rXX" firstAttribute="centerY" secondItem="RUG-Fg-8Dt" secondAttribute="centerY" id="5wZ-a9-QkW"/>
+                        <constraint firstItem="Xg0-Au-rXX" firstAttribute="centerX" secondItem="RUG-Fg-8Dt" secondAttribute="centerX" id="Kml-jz-t67"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="He5-r2-0y1" firstAttribute="top" secondItem="HD8-jw-eBi" secondAttribute="bottom" id="3LF-Eb-RaJ"/>
                 <constraint firstAttribute="trailing" secondItem="HD8-jw-eBi" secondAttribute="trailing" constant="10" id="555-bx-CIa"/>
+                <constraint firstItem="RUG-Fg-8Dt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="842-f1-EOE"/>
+                <constraint firstAttribute="bottom" secondItem="RUG-Fg-8Dt" secondAttribute="bottom" id="92i-qP-3i6"/>
                 <constraint firstItem="zig-Oe-7QB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9M7-Uf-tEp"/>
                 <constraint firstAttribute="bottom" secondItem="He5-r2-0y1" secondAttribute="bottom" constant="30" id="BEy-iF-f6H"/>
                 <constraint firstItem="HD8-jw-eBi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Buo-oh-8w1"/>
+                <constraint firstAttribute="trailing" secondItem="RUG-Fg-8Dt" secondAttribute="trailing" id="I0R-cb-QV6"/>
                 <constraint firstAttribute="trailing" secondItem="He5-r2-0y1" secondAttribute="trailing" constant="10" id="LB7-nU-p8N"/>
                 <constraint firstAttribute="trailing" secondItem="zig-Oe-7QB" secondAttribute="trailing" id="PZc-I5-Sad"/>
+                <constraint firstItem="RUG-Fg-8Dt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RQx-TS-eNJ"/>
                 <constraint firstItem="He5-r2-0y1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="gQ2-1I-eCy"/>
                 <constraint firstItem="HD8-jw-eBi" firstAttribute="top" secondItem="zig-Oe-7QB" secondAttribute="bottom" id="us9-fn-5yw"/>
                 <constraint firstItem="zig-Oe-7QB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="wZM-2r-cBJ"/>

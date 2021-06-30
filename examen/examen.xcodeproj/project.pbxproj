@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		678D268B268BF97D00EA26BA /* SearchProductsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2685268BF97D00EA26BA /* SearchProductsInteractor.swift */; };
 		678D268C268BF97D00EA26BA /* SearchProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D2686268BF97D00EA26BA /* SearchProductsViewController.xib */; };
 		678D268F268BFC8400EA26BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D268D268BFC8400EA26BA /* Main.storyboard */; };
-		678D2691268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */; };
 		678D2696268C018B00EA26BA /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2695268C018B00EA26BA /* TagCollectionView.swift */; };
 		678D2698268C01D000EA26BA /* ProductsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2697268C01D000EA26BA /* ProductsCollectionView.swift */; };
 		678D269B268C01F200EA26BA /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2699268C01F200EA26BA /* TagCollectionViewCell.swift */; };
@@ -25,12 +24,10 @@
 		678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */; };
 		678D26A0268C020300EA26BA /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */; };
 		678D26A2268C0D5C00EA26BA /* ProductsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */; };
-		CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */; };
+		678D26A4268C2D6400EA26BA /* RecoveryPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D26A3268C2D6400EA26BA /* RecoveryPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.release.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.release.xcconfig"; sourceTree = "<group>"; };
-		1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_examen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D2669268BF77D00EA26BA /* examen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D266C268BF77D00EA26BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		678D2675268BF78100EA26BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		678D2685268BF97D00EA26BA /* SearchProductsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsInteractor.swift; sourceTree = "<group>"; };
 		678D2686268BF97D00EA26BA /* SearchProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProductsViewController.xib; sourceTree = "<group>"; };
 		678D268E268BFC8400EA26BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsRemoteDataManager.swift; sourceTree = "<group>"; };
 		678D2695268C018B00EA26BA /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
 		678D2697268C01D000EA26BA /* ProductsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionView.swift; sourceTree = "<group>"; };
 		678D2699268C01F200EA26BA /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -51,7 +47,7 @@
 		678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEntity.swift; sourceTree = "<group>"; };
-		7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.debug.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.debug.xcconfig"; sourceTree = "<group>"; };
+		678D26A3268C2D6400EA26BA /* RecoveryPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,37 +55,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BC17EF15441D6B962BBD14A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */,
-				03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		280D34FEA49155EC4CBAA9ED /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		678D2660268BF77D00EA26BA = {
 			isa = PBXGroup;
 			children = (
 				678D266B268BF77D00EA26BA /* examen */,
 				678D266A268BF77D00EA26BA /* Products */,
-				0BC17EF15441D6B962BBD14A /* Pods */,
-				280D34FEA49155EC4CBAA9ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +100,6 @@
 				678D2684268BF97D00EA26BA /* SearchProductsProtocols.swift */,
 				678D2685268BF97D00EA26BA /* SearchProductsInteractor.swift */,
 				678D2686268BF97D00EA26BA /* SearchProductsViewController.xib */,
-				678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */,
 			);
 			path = SearchProducts;
 			sourceTree = "<group>";
@@ -139,6 +114,7 @@
 				678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */,
 				678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */,
 				678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */,
+				678D26A3268C2D6400EA26BA /* RecoveryPassword.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -150,11 +126,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 678D267D268BF78100EA26BA /* Build configuration list for PBXNativeTarget "examen" */;
 			buildPhases = (
-				E2C5B9395B6DE165A84781AB /* [CP] Check Pods Manifest.lock */,
 				678D2665268BF77D00EA26BA /* Sources */,
 				678D2666268BF77D00EA26BA /* Frameworks */,
 				678D2667268BF77D00EA26BA /* Resources */,
-				FDD99665484E10F550844689 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,55 +187,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E2C5B9395B6DE165A84781AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-examen-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDD99665484E10F550844689 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		678D2665268BF77D00EA26BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				678D2688268BF97D00EA26BA /* SearchProductsRouter.swift in Sources */,
-				678D2691268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift in Sources */,
 				678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */,
 				678D266D268BF77D00EA26BA /* AppDelegate.swift in Sources */,
 				678D26A2268C0D5C00EA26BA /* ProductsEntity.swift in Sources */,
@@ -272,6 +203,7 @@
 				678D269B268C01F200EA26BA /* TagCollectionViewCell.swift in Sources */,
 				678D268A268BF97D00EA26BA /* SearchProductsProtocols.swift in Sources */,
 				678D268B268BF97D00EA26BA /* SearchProductsInteractor.swift in Sources */,
+				678D26A4268C2D6400EA26BA /* RecoveryPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +347,6 @@
 		};
 		678D267E268BF78100EA26BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,7 +367,6 @@
 		};
 		678D267F268BF78100EA26BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
