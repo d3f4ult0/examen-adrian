@@ -39,18 +39,19 @@ class SearchProductsInteractor: SearchProductsInteractorProtocol {
             if data != nil{
                 let jsonData = data?.base64EncodedString().data(using: .utf8)
                 let producto = try! JSONDecoder().decode(Products.self, from: jsonData!)
+                self.returnInfo(product: producto)
             }else{
-                
+                self.returnError()
             }
         }.resume()
     }
     
-    func returnInfo(){
-        
+    func returnInfo(product:Products){
+        presenter?.returnInfo(product: product)
     }
     
     func returnError(){
-        
+        presenter?.returnError()
     }
     
 }

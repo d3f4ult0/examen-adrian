@@ -36,4 +36,12 @@ class SearchProductsPresenter: SearchProductsPresenterProtocol {
     func searchProduct(text: String, page: Int) {
         interactor?.searchProduct(text: text, page: page)
     }
+    
+    func returnInfo(product:Products){
+        view?.returnInfo(product: product)
+    }
+    
+    func returnError(){
+        view?.returnError()
+    }
 }

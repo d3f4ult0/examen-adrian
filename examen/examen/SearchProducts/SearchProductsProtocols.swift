@@ -19,6 +19,10 @@ protocol SearchProductsPresenterProtocol: AnyObject {
     func getTags() -> [String]
     func saveTags(tags:[String])
     func searchProduct(text:String,page:Int)
+    
+    func returnInfo(product:Products)
+    
+    func returnError()
 }
 
 //MARK: Interactor -
@@ -34,6 +38,10 @@ protocol SearchProductsInteractorProtocol: AnyObject {
 protocol SearchProductsViewProtocol: AnyObject {
 
   var presenter: SearchProductsPresenterProtocol?  { get set }
+    
+    func returnInfo(product:Products)
+    
+    func returnError()
 }
 
 //MARK: RemoteData -
