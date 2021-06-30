@@ -2,12 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchProductsViewController" customModule="examen" customModuleProvider="target">
             <connections>
+                <outlet property="productsCollectionView" destination="He5-r2-0y1" id="lU3-hs-dlm"/>
+                <outlet property="searchTextField" destination="SsN-m6-P5q" id="CgI-ki-ZiB"/>
+                <outlet property="tagsCollectionView" destination="HD8-jw-eBi" id="Bgl-7i-sxw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,16 +21,81 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JL-lz-0si">
-                    <rect key="frame" x="166" y="323" width="81" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zig-Oe-7QB" userLabel="SearchView">
+                    <rect key="frame" x="0.0" y="50" width="375" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ejemplo: &quot;Sony&quot;" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-m6-P5q">
+                            <rect key="frame" x="10" y="0.0" width="295" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-8c-3E2">
+                            <rect key="frame" x="305" y="0.0" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="eTU-kB-uEd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="Buscar"/>
+                            <connections>
+                                <action selector="searchButtonAction:" destination="-1" eventType="touchUpInside" id="dzb-n8-bM1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2Cb-8c-3E2" firstAttribute="leading" secondItem="SsN-m6-P5q" secondAttribute="trailing" id="2YB-LR-ioY"/>
+                        <constraint firstItem="2Cb-8c-3E2" firstAttribute="top" secondItem="zig-Oe-7QB" secondAttribute="top" id="7XK-K0-ihu"/>
+                        <constraint firstAttribute="bottom" secondItem="SsN-m6-P5q" secondAttribute="bottom" id="9i4-qc-3LP"/>
+                        <constraint firstAttribute="bottom" secondItem="2Cb-8c-3E2" secondAttribute="bottom" id="FdF-9K-mgw"/>
+                        <constraint firstItem="SsN-m6-P5q" firstAttribute="top" secondItem="zig-Oe-7QB" secondAttribute="top" id="JFF-6q-5PM"/>
+                        <constraint firstAttribute="trailing" secondItem="2Cb-8c-3E2" secondAttribute="trailing" constant="10" id="c8L-k9-B9X"/>
+                        <constraint firstItem="SsN-m6-P5q" firstAttribute="leading" secondItem="zig-Oe-7QB" secondAttribute="leading" constant="10" id="jc6-Ud-x1R"/>
+                        <constraint firstAttribute="height" constant="40" id="shA-Lp-TJg"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HD8-jw-eBi" userLabel="TagsView" customClass="TagCollectionView" customModule="examen" customModuleProvider="target">
+                    <rect key="frame" x="10" y="90" width="355" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qZs-kf-pVZ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3HV-dx-1Te">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="He5-r2-0y1" userLabel="ProductsView" customClass="ProductsCollectionView" customModule="examen" customModuleProvider="target">
+                    <rect key="frame" x="10" y="140" width="355" height="497"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XYh-br-EC9">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="He5-r2-0y1" firstAttribute="top" secondItem="HD8-jw-eBi" secondAttribute="bottom" id="3LF-Eb-RaJ"/>
+                <constraint firstAttribute="trailing" secondItem="HD8-jw-eBi" secondAttribute="trailing" constant="10" id="555-bx-CIa"/>
+                <constraint firstItem="zig-Oe-7QB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9M7-Uf-tEp"/>
+                <constraint firstAttribute="bottom" secondItem="He5-r2-0y1" secondAttribute="bottom" constant="30" id="BEy-iF-f6H"/>
+                <constraint firstItem="HD8-jw-eBi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Buo-oh-8w1"/>
+                <constraint firstAttribute="trailing" secondItem="He5-r2-0y1" secondAttribute="trailing" constant="10" id="LB7-nU-p8N"/>
+                <constraint firstAttribute="trailing" secondItem="zig-Oe-7QB" secondAttribute="trailing" id="PZc-I5-Sad"/>
+                <constraint firstItem="He5-r2-0y1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="gQ2-1I-eCy"/>
+                <constraint firstItem="HD8-jw-eBi" firstAttribute="top" secondItem="zig-Oe-7QB" secondAttribute="bottom" id="us9-fn-5yw"/>
+                <constraint firstItem="zig-Oe-7QB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="wZM-2r-cBJ"/>
+            </constraints>
             <point key="canvasLocation" x="122" y="125"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

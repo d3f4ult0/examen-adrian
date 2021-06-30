@@ -11,11 +11,28 @@
 import UIKit
 
 class SearchProductsViewController: UIViewController, SearchProductsViewProtocol {
-
-	var presenter: SearchProductsPresenterProtocol?
-
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var tagsCollectionView: TagCollectionView!
+    @IBOutlet weak var productsCollectionView: ProductsCollectionView!
+    
+    var presenter: SearchProductsPresenterProtocol?
+    
+    //Variables
+    var tags:[String] = ["sony","Nintendo","Computer","sony","Nintendo","Computer","sony","Nintendo","Computer"]
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tagsCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
+        tagsCollectionView.setValues(tags: tags)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    @IBAction func searchButtonAction(_ sender: Any) {
+    }
+    
 }

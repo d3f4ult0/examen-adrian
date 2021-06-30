@@ -18,6 +18,12 @@
 		678D268C268BF97D00EA26BA /* SearchProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D2686268BF97D00EA26BA /* SearchProductsViewController.xib */; };
 		678D268F268BFC8400EA26BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D268D268BFC8400EA26BA /* Main.storyboard */; };
 		678D2691268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */; };
+		678D2696268C018B00EA26BA /* TagCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2695268C018B00EA26BA /* TagCollectionView.swift */; };
+		678D2698268C01D000EA26BA /* ProductsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2697268C01D000EA26BA /* ProductsCollectionView.swift */; };
+		678D269B268C01F200EA26BA /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D2699268C01F200EA26BA /* TagCollectionViewCell.swift */; };
+		678D269C268C01F200EA26BA /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */; };
+		678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */; };
+		678D26A0268C020300EA26BA /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */; };
 		CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +43,12 @@
 		678D2686268BF97D00EA26BA /* SearchProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProductsViewController.xib; sourceTree = "<group>"; };
 		678D268E268BFC8400EA26BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsRemoteDataManager.swift; sourceTree = "<group>"; };
+		678D2695268C018B00EA26BA /* TagCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionView.swift; sourceTree = "<group>"; };
+		678D2697268C01D000EA26BA /* ProductsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionView.swift; sourceTree = "<group>"; };
+		678D2699268C01F200EA26BA /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.debug.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +102,7 @@
 		678D266B268BF77D00EA26BA /* examen */ = {
 			isa = PBXGroup;
 			children = (
+				678D2692268C00F100EA26BA /* Utils */,
 				678D268D268BFC8400EA26BA /* Main.storyboard */,
 				678D2680268BF95700EA26BA /* SearchProducts */,
 				678D266C268BF77D00EA26BA /* AppDelegate.swift */,
@@ -112,6 +125,19 @@
 				678D2690268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift */,
 			);
 			path = SearchProducts;
+			sourceTree = "<group>";
+		};
+		678D2692268C00F100EA26BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				678D2695268C018B00EA26BA /* TagCollectionView.swift */,
+				678D2697268C01D000EA26BA /* ProductsCollectionView.swift */,
+				678D2699268C01F200EA26BA /* TagCollectionViewCell.swift */,
+				678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */,
+				678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */,
+				678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +201,8 @@
 			files = (
 				678D268C268BF97D00EA26BA /* SearchProductsViewController.xib in Resources */,
 				678D2679268BF78100EA26BA /* LaunchScreen.storyboard in Resources */,
+				678D26A0268C020300EA26BA /* ProductCollectionViewCell.xib in Resources */,
+				678D269C268C01F200EA26BA /* TagCollectionViewCell.xib in Resources */,
 				678D2676268BF78100EA26BA /* Assets.xcassets in Resources */,
 				678D268F268BFC8400EA26BA /* Main.storyboard in Resources */,
 			);
@@ -231,9 +259,13 @@
 			files = (
 				678D2688268BF97D00EA26BA /* SearchProductsRouter.swift in Sources */,
 				678D2691268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift in Sources */,
+				678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */,
 				678D266D268BF77D00EA26BA /* AppDelegate.swift in Sources */,
 				678D2687268BF97D00EA26BA /* SearchProductsPresenter.swift in Sources */,
+				678D2698268C01D000EA26BA /* ProductsCollectionView.swift in Sources */,
 				678D2689268BF97D00EA26BA /* SearchProductsViewController.swift in Sources */,
+				678D2696268C018B00EA26BA /* TagCollectionView.swift in Sources */,
+				678D269B268C01F200EA26BA /* TagCollectionViewCell.swift in Sources */,
 				678D268A268BF97D00EA26BA /* SearchProductsProtocols.swift in Sources */,
 				678D268B268BF97D00EA26BA /* SearchProductsInteractor.swift in Sources */,
 			);
@@ -386,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H27YCU5AZR;
 				INFOPLIST_FILE = examen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -406,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H27YCU5AZR;
 				INFOPLIST_FILE = examen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
