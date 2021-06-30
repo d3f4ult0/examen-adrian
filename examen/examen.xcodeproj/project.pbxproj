@@ -13,9 +13,12 @@
 		678D2674268BF77D00EA26BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D2672268BF77D00EA26BA /* Main.storyboard */; };
 		678D2676268BF78100EA26BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678D2675268BF78100EA26BA /* Assets.xcassets */; };
 		678D2679268BF78100EA26BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678D2677268BF78100EA26BA /* LaunchScreen.storyboard */; };
+		CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.release.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.release.xcconfig"; sourceTree = "<group>"; };
+		1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_examen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D2669268BF77D00EA26BA /* examen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678D266C268BF77D00EA26BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		678D266E268BF77D00EA26BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		678D2675268BF78100EA26BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		678D2678268BF78100EA26BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		678D267A268BF78100EA26BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.debug.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC17EF15441D6B962BBD14A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */,
+				03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		280D34FEA49155EC4CBAA9ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		678D2660268BF77D00EA26BA = {
 			isa = PBXGroup;
 			children = (
 				678D266B268BF77D00EA26BA /* examen */,
 				678D266A268BF77D00EA26BA /* Products */,
+				0BC17EF15441D6B962BBD14A /* Pods */,
+				280D34FEA49155EC4CBAA9ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 678D267D268BF78100EA26BA /* Build configuration list for PBXNativeTarget "examen" */;
 			buildPhases = (
+				E2C5B9395B6DE165A84781AB /* [CP] Check Pods Manifest.lock */,
 				678D2665268BF77D00EA26BA /* Sources */,
 				678D2666268BF77D00EA26BA /* Frameworks */,
 				678D2667268BF77D00EA26BA /* Resources */,
+				FDD99665484E10F550844689 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2C5B9395B6DE165A84781AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-examen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD99665484E10F550844689 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-examen/Pods-examen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		678D2665268BF77D00EA26BA /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		678D267E268BF78100EA26BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		678D267F268BF78100EA26BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C41E619F91B06515CE3136 /* Pods-examen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
