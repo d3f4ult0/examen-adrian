@@ -24,6 +24,7 @@
 		678D269C268C01F200EA26BA /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */; };
 		678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */; };
 		678D26A0268C020300EA26BA /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */; };
+		678D26A2268C0D5C00EA26BA /* ProductsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */; };
 		CD7662DEC6EBBE959EEE7BCF /* Pods_examen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1301F0F4139F00B6F4BF1DD6 /* Pods_examen.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEntity.swift; sourceTree = "<group>"; };
 		7890E9A15D144E10B7DF1949 /* Pods-examen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-examen.debug.xcconfig"; path = "Target Support Files/Pods-examen/Pods-examen.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				678D269A268C01F200EA26BA /* TagCollectionViewCell.xib */,
 				678D269D268C020300EA26BA /* ProductCollectionViewCell.swift */,
 				678D269E268C020300EA26BA /* ProductCollectionViewCell.xib */,
+				678D26A1268C0D5C00EA26BA /* ProductsEntity.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				678D2691268BFD1700EA26BA /* SearchProductsRemoteDataManager.swift in Sources */,
 				678D269F268C020300EA26BA /* ProductCollectionViewCell.swift in Sources */,
 				678D266D268BF77D00EA26BA /* AppDelegate.swift in Sources */,
+				678D26A2268C0D5C00EA26BA /* ProductsEntity.swift in Sources */,
 				678D2687268BF97D00EA26BA /* SearchProductsPresenter.swift in Sources */,
 				678D2698268C01D000EA26BA /* ProductsCollectionView.swift in Sources */,
 				678D2689268BF97D00EA26BA /* SearchProductsViewController.swift in Sources */,

@@ -19,12 +19,19 @@ class SearchProductsViewController: UIViewController, SearchProductsViewProtocol
     
     //Variables
     var tags:[String] = ["sony","Nintendo","Computer","sony","Nintendo","Computer","sony","Nintendo","Computer"]
+    var products:Products?
     
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         tagsCollectionView.register(UINib(nibName: "TagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TagCell")
         tagsCollectionView.setValues(tags: tags)
+        
+        productsCollectionView.register(UINib(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
+        let producDetail1 = ProductDetails(title: "Primer producto", imageUrl: "https://i5.walmartimages.com/asr/8a54d8c4-fe2b-45e5-a82d-5e7795cc3bbc_1.b62390d770a96572adaa9584f64bdfe2.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff", primaryOffer: PrimaryOffer(offerPrice: 250, currencyCode: "USD"))
+        let producDetail2 = ProductDetails(title: "Segundo producto", imageUrl: "https://i5.walmartimages.com/asr/8a54d8c4-fe2b-45e5-a82d-5e7795cc3bbc_1.b62390d770a96572adaa9584f64bdfe2.jpeg?odnHeight=200&odnWidth=200&odnBg=ffffff", primaryOffer: PrimaryOffer(offerPrice: 399, currencyCode: "MXN"))
+        products = Products(numberOfProducts: 2, productDetails: [producDetail1,producDetail2])
+        productsCollectionView.setValues(products: products!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
